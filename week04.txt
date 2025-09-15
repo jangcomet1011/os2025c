@@ -1,0 +1,9 @@
+리눅스 명령어
+ddd
+
+
+깃 명령어
+git commit -- amend -m "수정할커밋메시지"
+git reset -- hard HEAD ~ 최근 커밋부터 삭제 할 갯 수
+git fetch
+git pull
