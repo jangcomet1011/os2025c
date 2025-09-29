@@ -6,9 +6,32 @@ import (
 )
 
 func main() {
-	fmt.Println(reflect.TypeOf(2.31))
-	fmt.Println(reflect.TypeOf("jallyyam"))
-	fmt.Println(reflect.TypeOf(true))
-	fmt.Println(reflect.TypeOf('A'))
-	fmt.Println(reflect.TypeOf(20))
+	//var id int16
+	//var name string
+	//var gpa float64
+
+	//id = 999
+	//name = "jallyyam"
+	//gpa = 3.99
+
+	//fmt.Println("학번은 ", id, ", 이름은", name)
+	//fmt.Println("평점 : ", gpa)
+
+	//var id int16 = 999
+	//var name string = "jallyyam"
+	//var gpa float32 = 3.99
+
+	//fmt.Println("학번은 ", id, ", 이름은", name)
+	//fmt.Println("평점 : ", gpa)
+
+	//var id = 999
+	//var name = "jallyyam"
+	//var gpa = 3.99
+
+	id := 999
+	name := "jallyyam"
+	gpa := 3.99
+
+	fmt.Println("학번은 ", id, reflect.TypeOf(id), ", 이름은", name, reflect.TypeOf(name))
+	fmt.Println("평점 : ", gpa, reflect.TypeOf(gpa))
 }
