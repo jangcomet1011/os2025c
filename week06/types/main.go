@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	"math"
-	"strings"
+	"reflect"
 )
 
 func main() {
-	fmt.Println(math.Round(2.21))
-	fmt.Println(math.Ceil(2.21))
-	fmt.Println(strings.Title("go devlr"))
-	fmt.Println("kim\nInha\t\"\\")
-	fmt.Println('2', '가')
+	fmt.Println(reflect.TypeOf(2.31))
+	fmt.Println(reflect.TypeOf("jallyyam"))
+	fmt.Println(reflect.TypeOf(true))
+	fmt.Println(reflect.TypeOf('A'))
+	fmt.Println(reflect.TypeOf(20))
 }
