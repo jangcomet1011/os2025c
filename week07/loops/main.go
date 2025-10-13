@@ -5,16 +5,43 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main() {
+
+	fmt.Print("Enter a score: ")
 	r := bufio.NewReader(os.Stdin)
-	//i, _ := r.ReadString('\n') // 에러를 무시함 "_" 는
+	// i, _ := r.ReadString('\n') // ignore error
 	i, err := r.ReadString('\n')
-	//fmt.Println(err)
+	// fmt.Println(err)
 	if err != nil {
-		log.Fatal(err) //report 에러 그리고 프로그램을 끝냄
+		log.Fatal(err) // report the error and exit the program
+		log.Fatal(err)
+	}
+	fmt.Println(i)
+
+	i = strings.TrimSpace(i)                // 문자열 주위에 붙은 공란 및 탭 키 등 제거
+	score, err := strconv.ParseFloat(i, 64) // 정리된 문자열을 실수타입으로 변환
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	fmt.Println(i)
+	if score >= 60 {
+		fmt.Println(score, "Pass")
+	} else {
+		fmt.Println(score, "Fail")
+	}
+
+	// shadowing
+	//var float64 float64 = 2.71
+	//var f float64 = 3.9991
+	//fmt.Println(float64)
+	//fmt.Println(f)
+
+	// 패키지 또는 정해진 타입의 함수명은 변수명으로 사용할수없제리얌
+	//var fmt float64 = 2.71
+	//fmt.Println(f)
+
 }
