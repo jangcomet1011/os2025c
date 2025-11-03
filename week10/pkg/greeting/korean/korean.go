@@ -4,6 +4,7 @@ import "fmt"
 
 func Anyunghaseyo() {
 	fmt.Println("안녕하세요!")
+	//anyung()
 }
 
 func Anyung() {
