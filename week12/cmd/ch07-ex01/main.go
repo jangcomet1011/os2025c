@@ -16,7 +16,7 @@ func main() {
 	for _, line := range lines {
 		counts[line]++
 	}
-
+	//delete(counts, "제리얌")
 	for name, count := range counts {
 		fmt.Println(name, ":", count)
 	}
